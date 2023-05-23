@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Atendimento</title>
+    <style>
+      body {
+        display: flex;
+        margin-top: 50px;
+        background-color: #f4f5fa;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: #000000;
+        font-family: Arial, Helvetica, sans-serif;
+        flex-direction: column;
+      }
+
+      .myButton {
+        width: 380px;
+        background-color: #e0107f;
+        border-radius: 7px;
+        display: inline-block;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: Arial;
+        font-size: 16px;
+        padding: 20px 54px;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: none;
+        margin: 15px;
+      }
+      .myButton:hover {
+        background-color: #b01369;
+      }
+      .myButton:active {
+        position: relative;
+        top: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="./api.js"></script>
+    <img src="logo.png" alt="logo" style="width: 100px; margin-bottom: 60px" />
+    <h2>Bem-Vindo</h2>
+    <button class="myButton" onclick="createTicket('SG')">
+      Atendimento Geral
+    </button>
+    <button class="myButton" onclick="createTicket('SP')">
+      Atendimento Preferencial
+    </button>
+    <button class="myButton" onclick="createTicket('SE')">
+      Retirada de Exames
+    </button>
+  </body>
+</html>

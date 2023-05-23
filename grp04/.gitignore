@@ -1,0 +1,30 @@
+# MacOs Filesystem
+
+.DS_Store
+
+# Node related
+
+node_modules
+
+# Test related
+
+/cypress/screenshots
+/cypress/videos
+coverage
+
+# Build and Bundle related
+
+/docs
+/docs-static
+/.cache
+/build
+/dist
+.eslintcache
+
+# Yarn related
+
+yarn-error.log
+
+#logs
+
+/logs

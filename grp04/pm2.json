@@ -1,0 +1,14 @@
+{
+  "apps": [
+    {
+      "name": "api-rest",
+      "script": "./dist/src/app.js",
+      "watch": ["./src"],
+      "error_file": "./logs/serverErr.log",
+      "out_file": "./logs/serverOut.log",
+      "combine_logs": true,
+      "max_restarts": 10,
+      "autorestart": true
+    }
+  ]
+}

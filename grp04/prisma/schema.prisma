@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Window {
+  id   String @id @default(uuid())
+  name String
+
+  Ticket Ticket[]
+}
+
+model Ticket {
+  id     String     @id @default(uuid())
+  role   TicketType @default(SG)
+  status Status     @default(WAITING)
+  code   String
+
+  window_id String?
+  window    Window? @relation(fields: [window_id], references: [id])
+
+  created_at  DateTime  @default(now())
+  updated_at  DateTime  @default(now()) @updatedAt
+  started_at  DateTime?
+  finished_at DateTime?
+}
+
+enum TicketType {
+  SP
+  SG
+  SE
+}
+
+enum Status {
+  WAITING
+  WORKING
+  FINISHED
+}
